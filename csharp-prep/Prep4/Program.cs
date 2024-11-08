@@ -6,15 +6,19 @@ class Program
     static void Main(string[] args)
     {
         List<int> numbers = new List<int>();
+
+        int smaller = 100000;
         
         // Please note we could use a do-while loop here instead
         int userNumber = -1;
         while (userNumber != 0)
         {
+        
             Console.Write("Enter a number (0 to quit): ");
             
             string userResponse = Console.ReadLine();
             userNumber = int.Parse(userResponse);
+            
             
             // Only add the number to the list if it is not 0
             if (userNumber != 0)
@@ -57,5 +61,16 @@ class Program
         }
 
         Console.WriteLine($"The max is: {max}");
+        foreach (int i in numbers){
+            if (i >= 0 && i < smaller){
+                smaller = i;
+                }
+        }
+        Console.WriteLine($"The smallest positive number = {smaller}");
+        numbers.Sort();
+        Console.WriteLine("The sorted list is:");
+        foreach (int i in numbers){
+            Console.WriteLine(i);
+        }
     }
 }
