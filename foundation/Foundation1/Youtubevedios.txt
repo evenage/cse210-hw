@@ -1,0 +1,21 @@
+Video Class
+
+Attributes:
+
+Title: The title of the video (String).
+Author: The name of the video's author (String).
+Length: The length of the video in seconds (Integer).
+Comments: A list to store comments associated with the video (List of Comment).
+Methods:
+
+AddComment(Comment comment): Adds a comment to the Comments list.
+GetNumberOfComments(): Returns the total number of comments (Integer).
+DisplayInfo(): Displays video details (title, author, length, and all comments).
+
+Comment Class
+
+Attributes:
+Name: The name of the person who made the comment (String).
+Text: The content of the comment (String).
+
+

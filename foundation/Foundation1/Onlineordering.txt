@@ -1,0 +1,46 @@
+ONLINE ORDERING DIAGRAM
+ 
+Class: Product 
+_name : string 
+_id : string 
+_itemPrice : float 
+_totalPrice : float 
+_quantity : int
+ 
+GetName() : string _name
+SetName() 
+GetPrice() : float _itemPrice 
+SetPrice()
+GetQuantity() : int _quantity
+SetQuantity() 
+GetID() : string _id 
+SetID() 
+CalculateTotalPrice() : float - _price*_quantity
+ 
+Class: Customer 
+_name : string
+_address : Address
+ 
+CustomerInUSA() : bool - Address.AddressInUSA()  
+ 
+Class: Address 
+_street : string
+_city : string 
+_stateProvince : string
+_country : string
+ 
+AddressInUSA(_country) : bool - Checks if Address._country == USA
+DisplayFullAddress() : string - (with newline characters where appropriate \n) street, city, state, country
+ 
+Class: Order 
+_listProducts : List<Product> 
+_customer : List<Customer> 
+_totalPrice : int 
+_shippingCost : int 
+_packingLabel : string (name and product id) 
+_shippingLabel : string (name and address of the customer)
+ 
+CalculateShippingCost() : int - if Customer.CustomerInUSA == True $5. Else $35.
+CalculateTotalPrice() : int - Sum of each product plus one-time shipping cost.
+GetPackingLabel() : string - Pruduct._name + Product._id 
+GetShippingLabel() : string - Customer._name + Customer._address
