@@ -1,5 +1,1 @@
-SimpleGoal|stress|stresss|60|False
-EternalGoal|read scripture|read the scripture daily|100
-SimpleGoal|read scripture|read scripture daily|100|False
-SimpleGoal|anaconda|its a big snake|100|False
-EternalGoal|hai|heeee|60
+SimpleGoal|hh|uuu|600|False
